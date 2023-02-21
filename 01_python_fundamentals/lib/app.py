@@ -65,30 +65,63 @@ pet_name = "Rose"
 # f "My name is {name}"
 # f => format
 
-def say_hello(name="Student"):
-    print(f"Hello, {name}!")
-    print("Hello, world!")
+# def say_hello(name="Student"):
+#     print(f"Hello, {name}!")
+    #print("Hello, world!")
 
 
 # Wihtout Argument, Default Value "Student" kicks on
-say_hello()
+# say_hello()
 # With argument, We see expected output
-say_hello("Isabella")
-say_hello()
+# say_hello("Isabella")
 
 # JS Can invoke functios containing params without args
 # Python Cannot invoke functions containting params without args unless we have supplied a default argument
+
+
 
 # 4. ✅ Create a function (pet_greeting) that will return a string with interpolated pet's name
 # Test invocation of "pet_greeting" in ipdb using "pet_greeting()"
 # pet_greeting("Rose") => "Rose says hello!"
 # pet_greeting("Spot") => "Spot says hello!"
 
+#Use def for declaring functions 
+
+#Global Scope 
+# name="Bud"
+
+# #Function Scope
+# def pet_greeting():
+#     global name
+#     name="Spot"
+#     print(f"{name} say Hello!")
+# #In order to get bud to show up, we need to take away the parameters of name in the def statement
+# #Invoke functions with/without arguments
+
+# pet_greeting()
+# pet_greeting("Rose")
+# pet_greeting("Spot")
+
+
 # 5. ✅ Move conditional logic from Deliverable 1 into a function (pet_status) so that we may use it with different pets / moods
 # Test invocation of "pet_status" in ipdb using "pet_status(pet_name, pet_mood)"
 # pet_status("Rose", "Hungry!") => "Rose needs to be fed."
 # pet_greeting("Spot", "Rowdy!") => "Spot needs a walk."
 # pet_greeting("Bud", "Relaxed") => "Bud is all good."
+
+
+def pet_status(pet_name, pet_mood):
+    if pet_mood == "Hungry!":
+        print(f'{pet_name}  needs to be fed.')
+    elif pet_mood == "Rowdy!":
+        print(f'{pet_name} needs a walk.')
+    else:
+        print(f'{pet_name} is all good.')
+
+
+# pet_status("Rose", "Hungry!")
+# pet_status("Spot", "Rowdy!")
+# pet_status("Bud", "Fiesty!")
 
 # Take a moment to note that "pet_name" and "pet_mood" parameters are within Local Scope and take priority over "pet_name" and "pet_mood"
 # in Global Scope.
