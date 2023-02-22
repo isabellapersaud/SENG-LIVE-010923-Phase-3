@@ -110,14 +110,13 @@ pet_name = "Rose"
 # pet_greeting("Bud", "Relaxed") => "Bud is all good."
 
 
-def pet_status(pet_name, pet_mood):
-    if pet_mood == "Hungry!":
-        print(f'{pet_name}  needs to be fed.')
-    elif pet_mood == "Rowdy!":
-        print(f'{pet_name} needs a walk.')
-    else:
-        print(f'{pet_name} is all good.')
-
+# def pet_status(pet_name, pet_mood):
+#     if pet_mood == "Hungry!":
+#         print(f'{pet_name}  needs to be fed.')
+#     elif pet_mood == "Rowdy!":
+#         print(f'{pet_name} needs a walk.')
+#     else:
+#         print(f'{pet_name} is all good.')
 
 # pet_status("Rose", "Hungry!")
 # pet_status("Spot", "Rowdy!")
@@ -130,6 +129,24 @@ def pet_status(pet_name, pet_mood):
 # If our function is given an incorrect datatype, it should handle the TypeError exception and alert the user
 # pet_birthday(10) => "Happy Birthday! Your pet is now 11."
 # pet_birthday("oops") => "Type Error Occurred"
+
+# This is only one type of error that can occur 
+def pet_birthday(age):
+    try:
+        age = age + 1
+        print(f"Happy Birthday! Your pet is now {age}")
+    except TypeError:
+        print("Type Error Occurred")
+    except NameError:
+        print("Name Error Occurred")
+
+pet_birthday(10)
+#TypeError: can only concatenate str (not "int") to str
+# pet_birthday("10")
+
+
+
+#what is ipbd
 
 # Note => To view more common Python exceptions, visit https://docs.python.org/3/library/exceptions.html
 
